@@ -1,5 +1,8 @@
 <?php
 
+// Require includes
+require_once get_template_directory() . '/includes/post-types.php';
+
 add_action('wp_enqueue_scripts', function() {
     wp_enqueue_style(
         'arcwp-style',
@@ -25,14 +28,4 @@ add_action('after_setup_theme', function() {
     add_theme_support('post-thumbnails');
     add_theme_support('post-formats');
     add_theme_support('title-tag');
-});
-
-
-// Add to functions.php temporarily to debug
-add_action('admin_notices', function() {
-    if (current_theme_supports('post-thumbnails')) {
-        echo '<div class="notice notice-success"><p>Post thumbnails ARE supported</p></div>';
-    } else {
-        echo '<div class="notice notice-error"><p>Post thumbnails NOT supported</p></div>';
-    }
 });
