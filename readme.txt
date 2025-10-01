@@ -1,0 +1,53 @@
+=== ARC WP Theme ===
+Contributors: arcwp
+Requires at least: 6.0
+Tested up to: 6.7
+Requires PHP: 7.4
+Stable tag: 1.0.1
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+A modern, lightweight WordPress theme built with Tailwind CSS for the ARC WP ecosystem.
+
+== Description ==
+
+ARC WP Theme is a clean, performance-focused WordPress theme designed for modern web development. Built with Tailwind CSS and optimized for speed, it provides a solid foundation for custom WordPress projects.
+
+**Key Features:**
+
+* Tailwind CSS integration
+* Automatic updates via GitHub
+* Custom post type support
+* Optimized asset loading
+* Full menu and thumbnail support
+* Developer-friendly architecture
+
+== Installation ==
+
+1. Download the theme zip file
+2. Go to Appearance > Themes > Add New > Upload Theme
+3. Choose the downloaded zip file and click Install Now
+4. Activate the theme
+
+== Changelog ==
+
+= 1.0.1 =
+* Added automatic theme update system
+* Improved asset versioning and cache busting
+* Fixed stylesheet loading issues
+* Enhanced compatibility with WordPress 6.7+
+
+= 1.0.0 =
+* Initial release
+* Tailwind CSS integration
+* Custom post types support
+* Menu and thumbnail support
+
+== Upgrade Notice ==
+
+= 1.0.1 =
+Minor improvements and bug fixes. Safe to update.
+
+== Support ==
+
+For support and documentation, visit: https://arcwp.ca/docs
