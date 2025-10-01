@@ -2,6 +2,7 @@
 
 // Require includes
 require_once get_template_directory() . '/includes/post-types.php';
+require_once get_template_directory() . '/includes/packages/package-fields.php';
 
 add_action('wp_enqueue_scripts', function() {
     wp_enqueue_style(
