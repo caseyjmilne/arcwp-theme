@@ -49,14 +49,12 @@ jobs:
       
       - name: Create release directory
         run: |
-          mkdir -p release-temp
-          rsync -av --exclude-from='.distignore' ./ release-temp/${{ steps.slug.outputs.slug }}/
+          mkdir -p ${{ steps.slug.outputs.slug }}
+          rsync -av --exclude-from='.distignore' ./ ${{ steps.slug.outputs.slug }}/
       
       - name: Create zip file
         run: |
-          cd release-temp
           zip -r ${{ steps.slug.outputs.slug }}.zip ${{ steps.slug.outputs.slug }}/
-          mv ${{ steps.slug.outputs.slug }}.zip ../
       
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
