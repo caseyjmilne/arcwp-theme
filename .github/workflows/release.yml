@@ -54,7 +54,9 @@ jobs:
       
       - name: Create zip file
         run: |
-          zip -r ${{ steps.slug.outputs.slug }}.zip ${{ steps.slug.outputs.slug }}/
+          cd ${{ steps.slug.outputs.slug }}
+          zip -r ../${{ steps.slug.outputs.slug }}.zip .
+          cd ..
       
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
