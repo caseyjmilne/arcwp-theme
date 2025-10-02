@@ -1,7 +1,7 @@
 <?php
 
-// Require includes
-require_once get_template_directory() . '/includes/post-types.php';
+// Require Package CPT Support
+require_once get_template_directory() . '/includes/packages/package-post-type.php';
 require_once get_template_directory() . '/includes/packages/package-fields.php';
 
 add_action('wp_enqueue_scripts', function() {
@@ -27,22 +27,8 @@ add_action('after_setup_theme', function() {
     ));
     add_theme_support('menus');
     add_theme_support('post-thumbnails');
-    add_theme_support('post-formats');
     add_theme_support('title-tag');
 });
 
-/*
- *
- * Plugin Updater Integration
- * https://github.com/YahnisElsts/plugin-update-checker
- * 
- */
-
-require get_template_directory() . '/plugin-update-checker/plugin-update-checker.php';
-use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
-
-$myUpdateChecker = PucFactory::buildUpdateChecker(
-	'http://arcwp.ca/release/arcwp-theme/latest.json',
-	__FILE__,
-	'arcwp-theme'
-);
+// Theme updater management
+require_once get_template_directory() . '/deploy/manage.php';

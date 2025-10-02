@@ -28,7 +28,7 @@ get_header();
                     <div class="order-1 lg:order-2">
                         <!-- Version Badge -->
                         <?php
-                        $version = get_field('version_number');
+                        $version = get_field('version');
                         if ($version) :
                         ?>
                             <div class="inline-flex items-center gap-2 px-4 py-2 bg-black text-white rounded-full text-sm font-semibold mb-6">
@@ -41,7 +41,10 @@ get_header();
 
                         <!-- Title -->
                         <h1 class="text-4xl lg:text-5xl font-black text-black mb-6 leading-tight">
-                            <?php the_title(); ?>
+                            <?php
+                            $name = get_field('name');
+                            echo $name ? esc_html($name) : the_title();
+                            ?>
                         </h1>
 
                         <!-- Excerpt -->
@@ -51,11 +54,48 @@ get_header();
                             </p>
                         <?php endif; ?>
 
+                        <!-- Latest File Info -->
+                        <?php
+                        $latest = get_field('latest');
+                        if ($latest && is_array($latest)) :
+                        ?>
+                            <div class="bg-gray-50 rounded-lg p-6 mb-8">
+                                <h3 class="text-lg font-bold text-black mb-4">Latest Release</h3>
+                                <div class="space-y-2 text-sm">
+                                    <?php if (!empty($latest['filename'])) : ?>
+                                        <p class="text-gray-700">
+                                            <strong>File:</strong> <?php echo esc_html($latest['filename']); ?>
+                                        </p>
+                                    <?php endif; ?>
+                                    <?php if (!empty($latest['filesize'])) : ?>
+                                        <p class="text-gray-700">
+                                            <strong>Size:</strong> <?php echo esc_html(size_format($latest['filesize'])); ?>
+                                        </p>
+                                    <?php endif; ?>
+                                    <?php if (!empty($latest['mime_type'])) : ?>
+                                        <p class="text-gray-700">
+                                            <strong>Type:</strong> <?php echo esc_html($latest['mime_type']); ?>
+                                        </p>
+                                    <?php endif; ?>
+                                    <?php if (!empty($latest['url'])) : ?>
+                                        <p class="text-gray-700 break-all">
+                                            <strong>URL:</strong> <a href="<?php echo esc_url($latest['url']); ?>" class="text-blue-600 hover:underline"><?php echo esc_url($latest['url']); ?></a>
+                                        </p>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                        <?php endif; ?>
+
                         <!-- CTA Buttons -->
                         <div class="flex flex-col sm:flex-row gap-4 mb-8">
-                            <a href="#" class="inline-flex items-center justify-center bg-black text-white px-8 py-4 rounded-md text-sm font-medium hover:bg-gray-800 transition-colors">
-                                Get Started
-                            </a>
+                            <?php if ($latest && !empty($latest['url'])) : ?>
+                                <a href="<?php echo esc_url($latest['url']); ?>" download class="inline-flex items-center justify-center bg-black text-white px-8 py-4 rounded-md text-sm font-medium hover:bg-gray-800 transition-colors">
+                                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                    </svg>
+                                    Download Latest
+                                </a>
+                            <?php endif; ?>
                             <a href="#" class="inline-flex items-center justify-center border-2 border-black text-black px-8 py-4 rounded-md text-sm font-medium hover:bg-black hover:text-white transition-colors">
                                 View Documentation
                             </a>
@@ -117,7 +157,7 @@ get_header();
                                 <div class="p-6">
                                     <!-- Version -->
                                     <?php
-                                    $related_version = get_field('version_number');
+                                    $related_version = get_field('version');
                                     if ($related_version) :
                                     ?>
                                         <div class="text-xs text-gray-500 mb-2">
