@@ -1,1 +1,15 @@
 @import "tailwindcss";
+
+/* Header nav links */
+header nav a {
+    font-weight: 700;
+    transition: opacity 0.2s ease;
+}
+
+header nav a:hover {
+    opacity: 0.5;
+}
+
+header nav .current-menu-item a {
+    opacity: 0.3;
+}

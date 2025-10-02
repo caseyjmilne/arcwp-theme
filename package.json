@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "npx tailwindcss -i ./tailwind/input.css -o ./tailwind/output.css --watch",
-    "build": "npx tailwindcss -i ./tailwind/input.css -o ./tailwind/output.css --minify"
+    "dev": "npx tailwindcss -i ./tailwind/input.css -o ./tailwind.css --watch",
+    "build": "npx tailwindcss -i ./tailwind/input.css -o ./tailwind.css --minify"
   },
   "keywords": [],
   "author": "",

@@ -14,7 +14,7 @@ add_action('wp_enqueue_scripts', function() {
 
     wp_enqueue_style(
         'arcwp-tailwind',
-        get_template_directory_uri() . '/tailwind/output.css',
+        get_template_directory_uri() . '/tailwind.css',
         [],
         wp_get_theme()->get('Version')
     );

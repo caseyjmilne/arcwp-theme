@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="container mx-auto px-4 py-8">
+<div class="max-w-[1120px] mx-auto px-4 py-8">
     <h1 class="text-4xl font-bold mb-8"><?php post_type_archive_title(); ?></h1>
 
     <?php if (have_posts()) : ?>
