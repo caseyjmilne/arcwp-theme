@@ -3,7 +3,7 @@ Contributors: arcwp
 Requires at least: 6.0
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 1.0.1
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,6 +31,18 @@ ARC WP Theme is a clean, performance-focused WordPress theme designed for modern
 
 == Changelog ==
 
+= 1.0.3 =
+* Added complete package post type support with archive template
+* Implemented responsive package grid layout
+* Updated header and footer with ARC\WP branding
+* Enhanced footer navigation with proper WordPress URL routing
+* Improved social media integration
+* Fixed package image asset loading
+
+= 1.0.2 =
+* Package archive grid improvements
+* Code-based ACF field registration
+
 = 1.0.1 =
 * Added automatic theme update system
 * Improved asset versioning and cache busting
@@ -45,8 +57,8 @@ ARC WP Theme is a clean, performance-focused WordPress theme designed for modern
 
 == Upgrade Notice ==
 
-= 1.0.1 =
-Minor improvements and bug fixes. Safe to update.
+= 1.0.3 =
+New package support and enhanced branding. Recommended update.
 
 == Support ==
 
