@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARC WP Theme - Version 1.0.3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #444;
+            background: #fff;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .header {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #23282d;
+            margin-bottom: 5px;
+        }
+
+        .version-info {
+            color: #666;
+            font-size: 13px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #23282d;
+            margin-bottom: 12px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 8px;
+        }
+
+        .section h3 {
+            font-size: 15px;
+            font-weight: 600;
+            color: #23282d;
+            margin: 15px 0 8px 0;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            padding: 6px 0 6px 20px;
+            position: relative;
+        }
+
+        ul li:before {
+            content: "•";
+            position: absolute;
+            left: 5px;
+            color: #0073aa;
+            font-weight: bold;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+
+        .badge-new {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .badge-improved {
+            background: #d1ecf1;
+            color: #0c5460;
+        }
+
+        .badge-fixed {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .highlight {
+            background: #f7f7f7;
+            border-left: 3px solid #0073aa;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        code {
+            background: #f3f4f5;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: Consolas, Monaco, monospace;
+            font-size: 13px;
+        }
+
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            color: #666;
+            font-size: 12px;
+        }
+
+        a {
+            color: #0073aa;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>ARC\WP Theme</h1>
+            <div class="version-info">
+                Version 1.0.3 | Released: October 2, 2025
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>What's New in 1.0.3</h2>
+            <p>This release introduces package support with a beautiful grid archive layout, enhanced branding throughout the theme, and improved header/footer navigation components.</p>
+        </div>
+
+        <div class="section">
+            <h2>Changelog</h2>
+
+            <h3><span class="badge badge-new">New</span> Features</h3>
+            <ul>
+                <li>Added complete package post type support with custom archive template</li>
+                <li>Implemented responsive package grid layout with featured images</li>
+                <li>Created package archive template with proper asset loading</li>
+                <li>Added support for package metadata and custom fields</li>
+            </ul>
+
+            <h3><span class="badge badge-improved">Improved</span> Enhancements</h3>
+            <ul>
+                <li>Updated site header with modern ARC\WP branding</li>
+                <li>Redesigned footer with ARC\WP logo and updated navigation structure</li>
+                <li>Enhanced footer links with proper WordPress URL routing</li>
+                <li>Updated footer tagline to "where speed meets precision"</li>
+                <li>Improved social media integration in footer (X/Twitter)</li>
+                <li>Refined footer copyright to display "ARC Software"</li>
+            </ul>
+
+            <h3><span class="badge badge-fixed">Fixed</span> Bug Fixes</h3>
+            <ul>
+                <li>Corrected package image asset paths and loading</li>
+                <li>Fixed footer navigation menu item URLs</li>
+                <li>Resolved branding consistency across header and footer</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Requirements</h2>
+            <ul>
+                <li>WordPress 6.0 or higher</li>
+                <li>PHP 7.4 or higher</li>
+                <li>MySQL 5.7 or higher</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Installation Notes</h2>
+            <div class="highlight">
+                <strong>Important:</strong> This update will be automatically downloaded and installed. After updating, please clear any caching plugins you may have installed to ensure all changes take effect.
+            </div>
+            <p>The update process is automatic and safe. Your theme customizations and settings will be preserved.</p>
+        </div>
+
+        <div class="section">
+            <h2>Documentation & Support</h2>
+            <ul>
+                <li>Theme Documentation: <a href="https://arcwp.ca/docs" target="_blank">https://arcwp.ca/docs</a></li>
+                <li>Support Forum: <a href="https://arcwp.ca/support" target="_blank">https://arcwp.ca/support</a></li>
+                <li>GitHub Repository: <a href="https://github.com/caseyjmilne/arcwp-theme" target="_blank">View on GitHub</a></li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2025 ARC Software. All rights reserved.</p>
+            <p><a href="https://arcforge.dev" target="_blank">arcforge.dev</a></p>
+        </div>
+    </div>
+</body>
+</html>
