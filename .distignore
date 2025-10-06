@@ -4,6 +4,10 @@ node_modules/
 .github/
 .gitignore
 .distignore
+.claude/
+
+# Deployment folder
+deploy/
 
 # Build tools
 package.json
