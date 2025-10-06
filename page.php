@@ -11,7 +11,17 @@ get_header();
                     <?php the_title(); ?>
                 </h1>
 
-                <div class="prose prose-lg max-w-none prose-headings:font-black prose-headings:text-black prose-p:text-gray-700 prose-p:leading-relaxed prose-a:text-black prose-a:font-semibold hover:prose-a:opacity-70 prose-strong:text-black prose-strong:font-bold prose-img:rounded-xl">
+                <div class="prose prose-lg max-w-none
+                    prose-headings:font-black prose-headings:text-black
+                    prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6
+                    prose-h3:text-2xl prose-h3:mt-10 prose-h3:mb-4
+                    prose-h4:text-xl prose-h4:mt-8 prose-h4:mb-3
+                    prose-p:text-gray-700 prose-p:leading-relaxed prose-p:mb-6
+                    prose-a:text-black prose-a:font-semibold hover:prose-a:opacity-70
+                    prose-strong:text-black prose-strong:font-bold
+                    prose-img:rounded-xl
+                    prose-pre:bg-blue-950 prose-pre:border prose-pre:border-blue-900
+                    prose-code:text-blue-100 prose-code:before:content-[''] prose-code:after:content-['']">
                     <?php the_content(); ?>
                 </div>
             </div>

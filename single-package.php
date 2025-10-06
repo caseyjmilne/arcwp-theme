@@ -41,10 +41,7 @@ get_header();
 
                         <!-- Title -->
                         <h1 class="text-4xl lg:text-5xl font-black text-black mb-6 leading-tight">
-                            <?php
-                            $name = get_field('name');
-                            echo $name ? esc_html($name) : the_title();
-                            ?>
+                            <?php the_title(); ?>
                         </h1>
 
                         <!-- Excerpt -->
@@ -57,11 +54,17 @@ get_header();
                         <!-- Latest File Info -->
                         <?php
                         $latest = get_field('latest');
+                        $name = get_field('name');
                         if ($latest && is_array($latest)) :
                         ?>
                             <div class="bg-gray-50 rounded-lg p-6 mb-8">
                                 <h3 class="text-lg font-bold text-black mb-4">Latest Release</h3>
                                 <div class="space-y-2 text-sm">
+                                    <?php if (!empty($name)) : ?>
+                                        <p class="text-gray-700">
+                                            <strong>Name:</strong> <?php echo esc_html($name); ?>
+                                        </p>
+                                    <?php endif; ?>
                                     <?php if (!empty($latest['filename'])) : ?>
                                         <p class="text-gray-700">
                                             <strong>File:</strong> <?php echo esc_html($latest['filename']); ?>
@@ -96,7 +99,7 @@ get_header();
                                     Download Latest
                                 </a>
                             <?php endif; ?>
-                            <a href="#" class="inline-flex items-center justify-center border-2 border-black text-black px-8 py-4 rounded-md text-sm font-medium hover:bg-black hover:text-white transition-colors">
+                            <a href="<?php echo esc_url(site_url('docs')); ?>" class="inline-flex items-center justify-center border-2 border-black text-black px-8 py-4 rounded-md text-sm font-medium hover:bg-black hover:text-white transition-colors">
                                 View Documentation
                             </a>
                         </div>
