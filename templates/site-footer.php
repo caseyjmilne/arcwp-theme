@@ -17,10 +17,10 @@
                 <div>
                     <h3 class="text-white font-semibold text-sm mb-4">Products</h3>
                     <ul class="space-y-2">
-                        <li><a href="<?php echo esc_url(site_url('themes')); ?>" class="text-sm hover:text-white transition-colors">Themes</a></li>
-                        <li><a href="<?php echo esc_url(site_url('plugins')); ?>" class="text-sm hover:text-white transition-colors">Plugins</a></li>
-                        <li><a href="<?php echo esc_url(site_url('blocks')); ?>" class="text-sm hover:text-white transition-colors">Blocks</a></li>
-                        <li><a href="<?php echo esc_url(site_url('templates')); ?>" class="text-sm hover:text-white transition-colors">Templates</a></li>
+                        <li><a href="<?php echo esc_url(site_url('packages/arc-forge')); ?>" class="text-sm hover:text-white transition-colors">ARC Forge</a></li>
+                        <li><a href="<?php echo esc_url(site_url('packages/arc-gateway')); ?>" class="text-sm hover:text-white transition-colors">ARC Gateway</a></li>
+                        <li><a href="<?php echo esc_url(site_url('packages/arc-blueprint')); ?>" class="text-sm hover:text-white transition-colors">ARC Blueprint</a></li>
+                        <li><a href="<?php echo esc_url(site_url('packages')); ?>" class="text-sm hover:text-white transition-colors">All Products</a></li>
                     </ul>
                 </div>
 
@@ -61,8 +61,8 @@
                 <div>
                     <h3 class="text-white font-semibold text-sm mb-4">Developers</h3>
                     <ul class="space-y-2">
-                        <li><a href="<?php echo esc_url(site_url('api-docs')); ?>" class="text-sm hover:text-white transition-colors">API Docs</a></li>
-                        <li><a href="<?php echo esc_url(site_url('github')); ?>" class="text-sm hover:text-white transition-colors">GitHub</a></li>
+                        <li><a href="<?php echo esc_url(site_url('docs')); ?>" class="text-sm hover:text-white transition-colors">Documentation</a></li>
+                        <li><a href="https://github.com/caseyjmilne/" target="_blank" rel="noopener noreferrer" class="text-sm hover:text-white transition-colors">GitHub</a></li>
                         <li><a href="<?php echo esc_url(site_url('changelog')); ?>" class="text-sm hover:text-white transition-colors">Changelog</a></li>
                         <li><a href="<?php echo esc_url(site_url('roadmap')); ?>" class="text-sm hover:text-white transition-colors">Roadmap</a></li>
                     </ul>
