@@ -28,10 +28,10 @@
                 <div>
                     <h3 class="text-white font-semibold text-sm mb-4">Solutions</h3>
                     <ul class="space-y-2">
-                        <li><a href="<?php echo esc_url(site_url('e-commerce')); ?>" class="text-sm hover:text-white transition-colors">E-commerce</a></li>
-                        <li><a href="<?php echo esc_url(site_url('membership')); ?>" class="text-sm hover:text-white transition-colors">Membership</a></li>
-                        <li><a href="<?php echo esc_url(site_url('portfolio')); ?>" class="text-sm hover:text-white transition-colors">Portfolio</a></li>
-                        <li><a href="<?php echo esc_url(site_url('business')); ?>" class="text-sm hover:text-white transition-colors">Business</a></li>
+                        <li><a href="<?php echo esc_url(site_url('elearning')); ?>" class="text-sm hover:text-white transition-colors">eLearning</a></li>
+                        <li><a href="<?php echo esc_url(site_url('ecommerce')); ?>" class="text-sm hover:text-white transition-colors">eCommerce</a></li>
+                        <li><a href="<?php echo esc_url(site_url('enterprise')); ?>" class="text-sm hover:text-white transition-colors">Enterprise</a></li>
+                        <li><a href="<?php echo esc_url(site_url('directories')); ?>" class="text-sm hover:text-white transition-colors">Directories</a></li>
                     </ul>
                 </div>
 
@@ -39,7 +39,7 @@
                 <div>
                     <h3 class="text-white font-semibold text-sm mb-4">Resources</h3>
                     <ul class="space-y-2">
-                        <li><a href="<?php echo esc_url(site_url('documentation')); ?>" class="text-sm hover:text-white transition-colors">Documentation</a></li>
+                        <li><a href="<?php echo esc_url(site_url('docs')); ?>" class="text-sm hover:text-white transition-colors">Knowledgebase</a></li>
                         <li><a href="<?php echo esc_url(site_url('tutorials')); ?>" class="text-sm hover:text-white transition-colors">Tutorials</a></li>
                         <li><a href="<?php echo esc_url(site_url('blog')); ?>" class="text-sm hover:text-white transition-colors">Blog</a></li>
                         <li><a href="<?php echo esc_url(site_url('support')); ?>" class="text-sm hover:text-white transition-colors">Support</a></li>
@@ -83,7 +83,7 @@
                 <div>
                     <h3 class="text-white font-semibold text-sm mb-4">Community</h3>
                     <ul class="space-y-2">
-                        <li><a href="<?php echo esc_url(site_url('forum')); ?>" class="text-sm hover:text-white transition-colors">Forum</a></li>
+                        <li><a href="<?php echo esc_url(site_url('partners')); ?>" class="text-sm hover:text-white transition-colors">Partners</a></li>
                         <li><a href="<?php echo esc_url(site_url('events')); ?>" class="text-sm hover:text-white transition-colors">Events</a></li>
                         <li><a href="<?php echo esc_url(site_url('newsletter')); ?>" class="text-sm hover:text-white transition-colors">Newsletter</a></li>
                         <li><a href="<?php echo esc_url(site_url('showcase')); ?>" class="text-sm hover:text-white transition-colors">Showcase</a></li>
