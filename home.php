@@ -2,12 +2,12 @@
 get_header();
 ?>
 
-<main class="min-h-screen bg-gray-50">
+<main class="min-h-screen">
     <!-- Page Header -->
-    <section class="py-16 lg:py-20 bg-white border-b border-gray-200">
+    <section class="py-16 lg:py-20 border-b border-gray-200">
         <div class="max-w-[1120px] mx-auto px-4">
-            <h1 class="text-5xl lg:text-6xl font-black text-black mb-4 leading-tight">
-                Blog
+            <h1 class="text-5xl font-bold text-gray-500 mb-4 leading-tight">
+                ARC<span class="ml-1 text-gray-600">\</span>Blog
             </h1>
             <p class="text-xl text-gray-600 max-w-2xl">
                 Insights, tutorials, and updates from the ARC Suite team
