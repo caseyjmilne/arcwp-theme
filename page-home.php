@@ -7,8 +7,8 @@
             <div class="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
                 <!-- Left Content -->
                 <div>
-                    <h1 class="text-6xl lg:text-7xl font-black text-black mb-8 leading-tight tracking-tight">
-                        Build WordPress Sites That Scale
+                    <h1 class="text-6xl lg:text-6xl font-black text-gray-500 mb-8 leading-tight tracking-tight">
+                        Make WordPress Sites That Scale
                     </h1>
                     <p class="text-xl text-gray-600 mb-10 leading-relaxed">
                         From rapid prototyping to enterprise-grade applications. ARC Suite gives you the professional tools and frameworks to build exceptional WordPress experiences.
@@ -38,7 +38,7 @@
                                 </svg>
                                 <span class="text-sm font-bold text-black">4.9/5</span>
                             </div>
-                            <p class="text-sm text-gray-500">Trusted by 50,000+ developers</p>
+                            <p class="text-sm text-gray-500">Trusted by nobody. We're new, and we're honest.</p>
                         </div>
                     </div>
                 </div>
