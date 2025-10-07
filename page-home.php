@@ -1,14 +1,8 @@
-<?php
-/*
-Template Name: Home
-*/
-
-get_header();
-?>
+<?php get_header(); ?>
 
 <main class="min-h-screen">
     <!-- Hero Section -->
-    <section class="py-24 lg:py-40 bg-gradient-to-b from-gray-50 to-white">
+    <section class="py-24 lg:py-40">
         <div class="max-w-[1120px] mx-auto px-4">
             <div class="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
                 <!-- Left Content -->
@@ -37,12 +31,6 @@ get_header();
 
                     <!-- Social Proof -->
                     <div class="flex items-center gap-6 pt-6 border-t border-gray-200">
-                        <div class="flex -space-x-2">
-                            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 border-2 border-white"></div>
-                            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-green-500 to-cyan-600 border-2 border-white"></div>
-                            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-orange-500 to-pink-600 border-2 border-white"></div>
-                            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-yellow-500 to-red-600 border-2 border-white"></div>
-                        </div>
                         <div>
                             <div class="flex items-center gap-1 mb-1">
                                 <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">

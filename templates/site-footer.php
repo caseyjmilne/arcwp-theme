@@ -1,13 +1,13 @@
-<footer class="bg-gray-900 text-gray-300 py-16 mt-auto">
+<footer class="border-t border-zinc-500 text-gray-300 py-16 mt-auto">
     <div class="max-w-[1120px] mx-auto px-4">
         <div class="flex flex-col md:flex-row justify-between gap-8 md:gap-12 lg:gap-16 mb-12">
             <!-- Logo and Slogan -->
             <div class="flex-shrink-0">
-                <a href="<?php echo esc_url(site_url('/')); ?>" class="text-3xl font-black text-white tracking-tight block mb-3">
+                <a href="<?php echo esc_url(site_url('/')); ?>" class="font-playfair text-2xl font-semibold text-zinc-300 block mb-3">
                     ARC\WP
                 </a>
                 <p class="text-sm text-gray-400 leading-relaxed max-w-xs mb-6">
-                    where speed meets precision
+                    WHERE SPEED MEETS PRECISION
                 </p>
             </div>
 
@@ -104,7 +104,7 @@
         </div>
 
         <!-- Copyright and Social -->
-        <div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+        <div class="pt-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
             <div>
                 <p class="text-sm text-gray-500 mb-4">
                     &copy; <?php echo date('Y'); ?> ARC Software. All rights reserved.

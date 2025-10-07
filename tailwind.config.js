@@ -5,7 +5,11 @@ module.exports = {
     "./templates/**/*.php"
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'playfair': ['Playfair Display', 'ui-serif', 'Georgia', 'serif'],
+      },
+    },
   },
   plugins: [],
 }
