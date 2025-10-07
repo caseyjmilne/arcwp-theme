@@ -7,7 +7,8 @@
       "Bash(npm run build:*)",
       "Bash(git tag:*)",
       "Bash(git push:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nRelease 1.0.4: Page templates, fonts, and navigation updates\n\n- Add legal page templates (Privacy, Terms, License, Security)\n- Add solution page templates (eLearning, eCommerce, Enterprise, Directories)\n- Add Partner Program and Newsletter page templates\n- Update footer navigation with new links and structure (Products, Solutions, Resources, Community)\n- Integrate Inter and Playfair Display fonts via Google Fonts\n- Add Tailwind Typography plugin support\n- Enhance single package template with improved field display\n- Update all documentation links to /docs\n- Advance version to 1.0.4 in readme.txt and style.css\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")"
     ],
     "deny": [],
     "ask": []
