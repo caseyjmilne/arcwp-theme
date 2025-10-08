@@ -3,7 +3,7 @@ Contributors: arcwp
 Requires at least: 6.0
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,6 +30,11 @@ ARC WP Theme is a clean, performance-focused WordPress theme designed for modern
 4. Activate the theme
 
 == Changelog ==
+
+= 1.0.5 =
+* Dark brand style defined and added. 
+* Font use updated.
+* Home page content updated.
 
 = 1.0.4 =
 * Added comprehensive legal page templates (Privacy, Terms, License, Security)
