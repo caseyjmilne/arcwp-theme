@@ -40,4 +40,4 @@ add_action('after_setup_theme', function() {
 });
 
 // Theme updater management
-require_once get_template_directory() . '/deploy/manage.php';
+require_once get_template_directory() . '/updater/manage.php';

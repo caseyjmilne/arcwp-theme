@@ -7,7 +7,7 @@
  *
  */
 
-require get_template_directory() . '/plugin-update-checker/plugin-update-checker.php';
+require get_template_directory() . '/updater/plugin-update-checker/plugin-update-checker.php';
 use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
 
 PucFactory::buildUpdateChecker(
