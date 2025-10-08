@@ -18,6 +18,15 @@ add_action('wp_enqueue_scripts', function() {
         [],
         wp_get_theme()->get('Version')
     );
+
+    // Enqueue anime.js from CDN
+    wp_enqueue_script(
+        'animejs',
+        'https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js',
+        [],
+        '3.2.2',
+        true
+    );
 });
 
 // Add theme support for menus and features

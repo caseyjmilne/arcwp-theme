@@ -5,22 +5,22 @@
 get_header();
 ?>
 
-<main class="min-h-screen bg-gray-50">
-    <article class="bg-white">
+<main class="min-h-screen">
+    <article>
         <div class="max-w-[1120px] mx-auto px-4 py-16 lg:py-20">
-            <h1 class="text-4xl lg:text-5xl font-black text-black mb-8 leading-tight">
+            <h1 class="text-4xl lg:text-5xl font-black text-gray-400 mb-8 leading-tight">
                 ARC Software Newsletter
             </h1>
 
             <div class="prose prose-lg max-w-none
-                prose-headings:font-black prose-headings:text-black
+                prose-headings:font-black prose-headings:text-gray-400
                 prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6
                 prose-h3:text-2xl prose-h3:mt-10 prose-h3:mb-4
                 prose-h4:text-xl prose-h4:mt-8 prose-h4:mb-3
-                prose-p:text-gray-700 prose-p:leading-relaxed prose-p:mb-6
-                prose-a:text-black prose-a:font-semibold hover:prose-a:opacity-70
-                prose-strong:text-black prose-strong:font-bold
-                prose-ul:mb-6 prose-li:text-gray-700">
+                prose-p:text-gray-400 prose-p:leading-relaxed prose-p:mb-6
+                prose-a:text-gray-400 prose-a:font-semibold hover:prose-a:opacity-70
+                prose-strong:text-gray-400 prose-strong:font-bold
+                prose-ul:mb-6 prose-li:text-gray-400">
 
                 <div class="bg-blue-50 border-l-4 border-blue-900 p-8 rounded-r-xl mb-12">
                     <h2 class="mt-0 mb-4">Coming November 2025</h2>
@@ -90,21 +90,21 @@ get_header();
                 <h2>Get Notified When We Launch</h2>
                 <p>Want to be among the first to receive our newsletter when it launches in November 2025? Sign up below and we'll notify you when the first issue goes out.</p>
 
-                <div class="bg-gray-50 p-8 rounded-xl mt-12">
+                <div class="p-8 rounded-xl mt-12 border border-gray-500">
                     <h3 class="mt-0">Pre-Register for Our Newsletter</h3>
                     <p class="mb-6">Join our pre-launch list and be the first to know when the ARC Software Newsletter goes live. As a thank you, early subscribers will receive exclusive access to our WordPress development resources library.</p>
                     <form class="space-y-4">
                         <div>
-                            <label for="email" class="block text-sm font-semibold text-gray-900 mb-2">Email Address</label>
+                            <label for="email" class="block text-sm font-semibold text-gray-400 mb-2">Email Address</label>
                             <input type="email" id="email" name="email" placeholder="your@email.com" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent" required>
                         </div>
                         <div>
-                            <label for="name" class="block text-sm font-semibold text-gray-900 mb-2">Name (Optional)</label>
+                            <label for="name" class="block text-sm font-semibold text-gray-400 mb-2">Name (Optional)</label>
                             <input type="text" id="name" name="name" placeholder="Your Name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent">
                         </div>
                         <div class="flex items-start">
-                            <input type="checkbox" id="agree" name="agree" class="mt-1 h-4 w-4 text-black border-gray-300 rounded focus:ring-black" required>
-                            <label for="agree" class="ml-2 text-sm text-gray-700">I agree to receive the ARC Software Newsletter and understand I can unsubscribe at any time.</label>
+                            <input type="checkbox" id="agree" name="agree" class="mt-1 h-4 w-4 text-gray-400 border-gray-300 rounded focus:ring-black" required>
+                            <label for="agree" class="ml-2 text-sm text-gray-400">I agree to receive the ARC Software Newsletter and understand I can unsubscribe at any time.</label>
                         </div>
                         <button type="submit" class="bg-black text-white px-8 py-3 rounded-lg font-semibold hover:opacity-80 transition-opacity">
                             Notify Me at Launch

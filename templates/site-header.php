@@ -2,7 +2,7 @@
     <div class="max-w-[1120px] mx-auto px-4">
         <div class="flex items-center justify-between h-20">
             <a href="<?php echo home_url('/'); ?>" class="font-playfair text-2xl font-semibold text-gray-400 hover:opacity-80 transition-opacity">
-                ARC<span class="text-gray-600 ml-1">\</span>WP
+                ARC<span class="text-gray-400 ml-1">\</span>WP
             </a>
             <nav class="flex-1 flex justify-center">
                 <?php

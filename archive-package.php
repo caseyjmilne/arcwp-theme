@@ -6,7 +6,7 @@
     <?php if (have_posts()) : ?>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <?php while (have_posts()) : the_post(); ?>
-                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <div class="rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                     <?php if (has_post_thumbnail()) : ?>
                         <a href="<?php the_permalink(); ?>" class="block aspect-video overflow-hidden">
                             <?php the_post_thumbnail('medium', array('class' => 'w-full h-full object-cover hover:scale-105 transition-transform duration-300')); ?>
@@ -21,13 +21,13 @@
                         </h2>
 
                         <?php if (get_field('name')) : ?>
-                            <p class="text-gray-700 mb-2">
+                            <p class="text-gray-400 mb-2">
                                 <strong>Name:</strong> <?php echo esc_html(get_field('name')); ?>
                             </p>
                         <?php endif; ?>
 
                         <?php if (get_field('version')) : ?>
-                            <p class="text-gray-700 mb-2">
+                            <p class="text-gray-400 mb-2">
                                 <strong>Version:</strong> <?php echo esc_html(get_field('version')); ?>
                             </p>
                         <?php endif; ?>
@@ -48,7 +48,7 @@
             <?php the_posts_pagination(); ?>
         </div>
     <?php else : ?>
-        <p class="text-gray-600">No packages found.</p>
+        <p class="text-gray-400">No packages found.</p>
     <?php endif; ?>
 </div>
 

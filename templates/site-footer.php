@@ -4,9 +4,9 @@
             <!-- Logo and Slogan -->
             <div class="flex-shrink-0">
                 <a href="<?php echo home_url('/'); ?>" class="font-playfair text-2xl font-semibold text-gray-400 hover:opacity-80 transition-opacity">
-                    ARC<span class="text-gray-600 ml-1">\</span>WP
+                    ARC<span class="text-gray-400 ml-1">\</span>WP
                 </a>
-                <p class="text-sm text-gray-600 leading-relaxed max-w-xs mb-6">
+                <p class="text-sm text-gray-400 leading-relaxed max-w-xs mb-6">
                     WHERE SPEED MEETS PRECISION
                 </p>
             </div>
@@ -106,7 +106,7 @@
         <!-- Copyright and Social -->
         <div class="pt-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
             <div>
-                <p class="text-sm text-gray-700 mb-4">
+                <p class="text-sm text-gray-400 mb-4">
                     &copy; <?php echo date('Y'); ?> ARC Software. All rights reserved.
                 </p>
                 <div class="flex gap-4">

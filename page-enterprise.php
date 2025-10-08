@@ -5,22 +5,22 @@
 get_header();
 ?>
 
-<main class="min-h-screen bg-gray-50">
-    <article class="bg-white">
+<main class="min-h-screen">
+    <article>
         <div class="max-w-[1120px] mx-auto px-4 py-16 lg:py-20">
-            <h1 class="text-4xl lg:text-5xl font-black text-black mb-8 leading-tight">
+            <h1 class="text-4xl lg:text-5xl font-black text-gray-400 mb-8 leading-tight">
                 Enterprise Solutions with ARC Suite
             </h1>
 
             <div class="prose prose-lg max-w-none
-                prose-headings:font-black prose-headings:text-black
+                prose-headings:font-black prose-headings:text-gray-400
                 prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6
                 prose-h3:text-2xl prose-h3:mt-10 prose-h3:mb-4
                 prose-h4:text-xl prose-h4:mt-8 prose-h4:mb-3
-                prose-p:text-gray-700 prose-p:leading-relaxed prose-p:mb-6
-                prose-a:text-black prose-a:font-semibold hover:prose-a:opacity-70
-                prose-strong:text-black prose-strong:font-bold
-                prose-ul:mb-6 prose-li:text-gray-700">
+                prose-p:text-gray-400 prose-p:leading-relaxed prose-p:mb-6
+                prose-a:text-gray-400 prose-a:font-semibold hover:prose-a:opacity-70
+                prose-strong:text-gray-400 prose-strong:font-bold
+                prose-ul:mb-6 prose-li:text-gray-400">
 
                 <p class="text-xl">Scale WordPress to enterprise levels with ARC Suite. Build robust, secure, and performant solutions that meet the demanding requirements of large organizations.</p>
 
@@ -280,7 +280,7 @@ get_header();
                     <li>Provide ongoing support and maintenance</li>
                 </ol>
 
-                <div class="bg-gray-50 p-8 rounded-xl mt-12">
+                <div class="p-8 rounded-xl mt-12 border border-gray-500">
                     <h3 class="mt-0">Enterprise WordPress Consulting</h3>
                     <p class="mb-4">Our team has extensive experience architecting and implementing enterprise WordPress solutions for Fortune 500 companies, government agencies, and large institutions. We can help you build secure, scalable, and performant systems that meet your organization's unique requirements.</p>
                     <a href="<?php echo esc_url(site_url('contact')); ?>" class="inline-block bg-black text-white px-6 py-3 rounded-lg font-semibold hover:opacity-80 transition-opacity no-underline">Discuss Your Project</a>
