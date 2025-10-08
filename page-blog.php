@@ -15,14 +15,14 @@ $args = array(
 $blog_query = new WP_Query($args);
 ?>
 
-<main class="min-h-screen bg-gray-50">
+<main class="min-h-screen">
     <!-- Page Header -->
-    <section class="py-16 lg:py-20 bg-white border-b border-gray-200">
+    <section class="py-16 lg:py-20 border-b border-gray-200">
         <div class="max-w-[1120px] mx-auto px-4">
-            <h1 class="text-5xl lg:text-6xl font-black text-black mb-4 leading-tight">
+            <h1 class="text-5xl lg:text-6xl font-black text-gray-400 mb-4 leading-tight">
                 Blog
             </h1>
-            <p class="text-xl text-gray-600 max-w-2xl">
+            <p class="text-xl text-gray-400 max-w-2xl">
                 Insights, tutorials, and updates from the ARC Suite team
             </p>
         </div>
@@ -35,7 +35,7 @@ $blog_query = new WP_Query($args);
             <?php if ($blog_query->have_posts()) : ?>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <?php while ($blog_query->have_posts()) : $blog_query->the_post(); ?>
-                        <article class="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                        <article class="group rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                             <!-- Featured Image -->
                             <?php if (has_post_thumbnail()) : ?>
                                 <a href="<?php the_permalink(); ?>" class="block aspect-[16/9] overflow-hidden">
@@ -63,7 +63,7 @@ $blog_query = new WP_Query($args);
                                     ?>
                                         <span class="flex items-center gap-1">
                                             <span class="w-1 h-1 bg-gray-400 rounded-full"></span>
-                                            <a href="<?php echo esc_url(get_category_link($category->term_id)); ?>" class="hover:text-black transition-colors">
+                                            <a href="<?php echo esc_url(get_category_link($category->term_id)); ?>" class="hover:text-gray-400 transition-colors">
                                                 <?php echo esc_html($category->name); ?>
                                             </a>
                                         </span>
@@ -71,19 +71,19 @@ $blog_query = new WP_Query($args);
                                 </div>
 
                                 <!-- Title -->
-                                <h2 class="text-xl font-bold text-black mb-3 leading-tight">
-                                    <a href="<?php the_permalink(); ?>" class="hover:text-gray-700 transition-colors">
+                                <h2 class="text-xl font-bold text-gray-400 mb-3 leading-tight">
+                                    <a href="<?php the_permalink(); ?>" class="hover:text-gray-400 transition-colors">
                                         <?php the_title(); ?>
                                     </a>
                                 </h2>
 
                                 <!-- Excerpt -->
-                                <p class="text-gray-600 leading-relaxed mb-4">
+                                <p class="text-gray-400 leading-relaxed mb-4">
                                     <?php echo wp_trim_words(get_the_excerpt(), 20, '...'); ?>
                                 </p>
 
                                 <!-- Read More -->
-                                <a href="<?php the_permalink(); ?>" class="inline-flex items-center text-sm font-semibold text-black hover:gap-2 transition-all">
+                                <a href="<?php the_permalink(); ?>" class="inline-flex items-center text-sm font-semibold text-gray-400 hover:gap-2 transition-all">
                                     Read More
                                     <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
@@ -115,8 +115,8 @@ $blog_query = new WP_Query($args);
                     <svg class="w-24 h-24 mx-auto text-gray-300 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
-                    <h2 class="text-2xl font-bold text-black mb-3">No posts found</h2>
-                    <p class="text-gray-600 mb-6">Check back soon for new content.</p>
+                    <h2 class="text-2xl font-bold text-gray-400 mb-3">No posts found</h2>
+                    <p class="text-gray-400 mb-6">Check back soon for new content.</p>
                     <a href="<?php echo home_url('/'); ?>" class="inline-flex items-center justify-center bg-black text-white px-6 py-3 rounded-md text-sm font-medium hover:bg-gray-800 transition-colors">
                         Back to Home
                     </a>

@@ -5,22 +5,22 @@
 get_header();
 ?>
 
-<main class="min-h-screen bg-gray-50">
-    <article class="bg-white">
+<main class="min-h-screen">
+    <article>
         <div class="max-w-[1120px] mx-auto px-4 py-16 lg:py-20">
-            <h1 class="text-4xl lg:text-5xl font-black text-black mb-8 leading-tight">
+            <h1 class="text-4xl lg:text-5xl font-black text-gray-400 mb-8 leading-tight">
                 Privacy Policy
             </h1>
 
             <div class="prose prose-lg max-w-none
-                prose-headings:font-black prose-headings:text-black
+                prose-headings:font-black prose-headings:text-gray-400
                 prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6
                 prose-h3:text-2xl prose-h3:mt-10 prose-h3:mb-4
                 prose-h4:text-xl prose-h4:mt-8 prose-h4:mb-3
-                prose-p:text-gray-700 prose-p:leading-relaxed prose-p:mb-6
-                prose-a:text-black prose-a:font-semibold hover:prose-a:opacity-70
-                prose-strong:text-black prose-strong:font-bold
-                prose-ul:mb-6 prose-li:text-gray-700">
+                prose-p:text-gray-400 prose-p:leading-relaxed prose-p:mb-6
+                prose-a:text-gray-400 prose-a:font-semibold hover:prose-a:opacity-70
+                prose-strong:text-gray-400 prose-strong:font-bold
+                prose-ul:mb-6 prose-li:text-gray-400">
 
                 <p class="text-sm text-gray-500 mb-8">Last updated: <?php echo date('F j, Y'); ?></p>
 
