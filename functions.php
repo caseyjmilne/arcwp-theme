@@ -19,14 +19,25 @@ add_action('wp_enqueue_scripts', function() {
         wp_get_theme()->get('Version')
     );
 
-    // Enqueue anime.js from CDN
-    wp_enqueue_script(
-        'animejs',
-        'https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js',
-        [],
-        '3.2.2',
-        true
-    );
+    // Enqueue home page animations as ES6 module (only on homepage)
+    // The module imports anime.js directly, so we don't need to enqueue it separately
+    if (is_front_page() || is_page_template('page-home.php')) {
+        wp_enqueue_script(
+            'arcwp-home-animations',
+            get_template_directory_uri() . '/js/home-animations.js',
+            [], // No dependencies - module imports anime.js itself
+            wp_get_theme()->get('Version'),
+            true
+        );
+
+        // Add type="module" attribute to the script tag
+        add_filter('script_loader_tag', function($tag, $handle) {
+            if ('arcwp-home-animations' === $handle) {
+                $tag = str_replace('<script ', '<script type="module" ', $tag);
+            }
+            return $tag;
+        }, 10, 2);
+    }
 });
 
 // Add theme support for menus and features
