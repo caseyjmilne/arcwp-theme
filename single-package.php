@@ -31,7 +31,7 @@ get_header();
                         $version = get_field('version');
                         if ($version) :
                         ?>
-                            <div class="inline-flex items-center gap-2 px-4 py-2 bg-black text-white rounded-full text-sm font-semibold mb-6">
+                            <div class="inline-flex items-center gap-2 px-4 py-2 bg-zinc-800 text-gray-400 rounded-full text-sm font-semibold mb-6">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
                                 </svg>
@@ -53,6 +53,7 @@ get_header();
 
                         <!-- Latest File Info -->
                         <?php
+                        $version = get_field('version');
                         $latest = get_field('latest');
                         $name = get_field('name');
                         if ($latest && is_array($latest)) :
@@ -60,6 +61,11 @@ get_header();
                             <div class="rounded-lg p-6 mb-8 border border-gray-500">
                                 <h3 class="text-lg font-bold text-gray-400 mb-4">Latest Release</h3>
                                 <div class="space-y-2 text-sm">
+                                    <?php if (!empty($version)) : ?>
+                                        <p class="text-gray-400">
+                                            <strong>Version:</strong> <?php echo esc_html($version); ?>
+                                        </p>
+                                    <?php endif; ?>
                                     <?php if (!empty($name)) : ?>
                                         <p class="text-gray-400">
                                             <strong>Name:</strong> <?php echo esc_html($name); ?>
@@ -70,19 +76,9 @@ get_header();
                                             <strong>File:</strong> <?php echo esc_html($latest['filename']); ?>
                                         </p>
                                     <?php endif; ?>
-                                    <?php if (!empty($latest['filesize'])) : ?>
-                                        <p class="text-gray-400">
-                                            <strong>Size:</strong> <?php echo esc_html(size_format($latest['filesize'])); ?>
-                                        </p>
-                                    <?php endif; ?>
                                     <?php if (!empty($latest['mime_type'])) : ?>
                                         <p class="text-gray-400">
                                             <strong>Type:</strong> <?php echo esc_html($latest['mime_type']); ?>
-                                        </p>
-                                    <?php endif; ?>
-                                    <?php if (!empty($latest['url'])) : ?>
-                                        <p class="text-gray-400 break-all">
-                                            <strong>URL:</strong> <a href="<?php echo esc_url($latest['url']); ?>" class="text-blue-600 hover:underline"><?php echo esc_url($latest['url']); ?></a>
                                         </p>
                                     <?php endif; ?>
                                 </div>
@@ -92,14 +88,14 @@ get_header();
                         <!-- CTA Buttons -->
                         <div class="flex flex-col sm:flex-row gap-4 mb-8">
                             <?php if ($latest && !empty($latest['url'])) : ?>
-                                <a href="<?php echo esc_url($latest['url']); ?>" download class="inline-flex items-center justify-center bg-black text-white px-8 py-4 rounded-md text-sm font-medium hover:bg-gray-800 transition-colors">
+                                <a href="<?php echo esc_url($latest['url']); ?>" download class="inline-flex items-center justify-center bg-zinc-800 text-gray-400 px-8 py-4 rounded-md text-sm font-medium hover:bg-gray-800 transition-colors">
                                     <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                                     </svg>
                                     Download Latest
                                 </a>
                             <?php endif; ?>
-                            <a href="<?php echo esc_url(site_url('docs')); ?>" class="inline-flex items-center justify-center border-2 border-black text-gray-400 px-8 py-4 rounded-md text-sm font-medium hover:bg-black hover:text-white transition-colors">
+                            <a href="<?php echo esc_url(site_url('docs')); ?>" class="inline-flex items-center justify-center border-2 border-black text-gray-400 px-8 py-4 rounded-md text-sm font-medium hover:bg-black hover:text-gray-400 transition-colors">
                                 View Documentation
                             </a>
                         </div>
