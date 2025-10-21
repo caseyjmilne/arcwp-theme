@@ -1,31 +1,32 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800;900&family=Lexend+Exa:wght@400;500;600;700;800;900&display=swap');
 
 @theme {
-  --font-inter: 'Inter', ui-sans-serif, system-ui, sans-serif;
-  --font-playfair: 'Playfair Display', ui-serif, Georgia, serif;
+  --font-geist: 'Geist', ui-sans-serif, system-ui, sans-serif;
+  --font-lexend: 'Lexend Exa', ui-sans-serif, system-ui, sans-serif;
+  --text-base: 1rem;
+  --text-base--line-height: 1.6;
 }
 
+@variant dark (&:where(.dark, .dark *));
+
 body {
-  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  font-family: 'Geist', ui-sans-serif, system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 h1, h2 {
-  font-family: 'Playfair Display', ui-serif, Georgia, serif;
+  font-family: 'Lexend Exa', ui-sans-serif, system-ui, sans-serif;
 }
 
-/* Header nav links */
+/* Minimal custom styles for WordPress menu structure */
 header nav a {
-    font-weight: 600;
     transition: opacity 0.2s ease;
 }
 
 header nav a:hover {
-    opacity: 0.5;
-}
-
-header nav .current-menu-item a {
-    opacity: 0.3;
+    opacity: 0.7;
 }

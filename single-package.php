@@ -1,5 +1,6 @@
 <?php
 get_header();
+return;
 ?>
 
 <main class="min-h-screen">
