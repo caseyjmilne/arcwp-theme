@@ -26,27 +26,15 @@
                 </a>
             </div>
 
-            <!-- Link Blocks - 2 rows x 4 cols -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-x-6 md:gap-x-8 lg:gap-x-12 gap-y-8 ml-auto min-w-0 md:min-w-[500px] lg:min-w-[700px]">
+            <!-- Link Blocks - 3 columns -->
+            <div class="grid grid-cols-3 gap-x-16 md:gap-x-24 lg:gap-x-32 ml-auto">
                 <!-- Products -->
                 <div>
                     <h3 class="font-lexend font-semibold text-sm mb-4">Products</h3>
                     <ul class="space-y-2">
-                        <li><a href="<?php echo esc_url(site_url('packages/arc-forge')); ?>" class="text-sm hover:text-orange-600 transition-colors">ARC Forge</a></li>
-                        <li><a href="<?php echo esc_url(site_url('packages/arc-gateway')); ?>" class="text-sm hover:text-orange-600 transition-colors">ARC Gateway</a></li>
-                        <li><a href="<?php echo esc_url(site_url('packages/arc-blueprint')); ?>" class="text-sm hover:text-orange-600 transition-colors">ARC Blueprint</a></li>
-                        <li><a href="<?php echo esc_url(site_url('packages')); ?>" class="text-sm hover:text-orange-600 transition-colors">All Products</a></li>
-                    </ul>
-                </div>
-
-                <!-- Solutions -->
-                <div>
-                    <h3 class="font-lexend font-semibold text-sm mb-4">Solutions</h3>
-                    <ul class="space-y-2">
-                        <li><a href="<?php echo esc_url(site_url('elearning')); ?>" class="text-sm hover:text-orange-600 transition-colors">eLearning</a></li>
-                        <li><a href="<?php echo esc_url(site_url('ecommerce')); ?>" class="text-sm hover:text-orange-600 transition-colors">eCommerce</a></li>
-                        <li><a href="<?php echo esc_url(site_url('enterprise')); ?>" class="text-sm hover:text-orange-600 transition-colors">Enterprise</a></li>
-                        <li><a href="<?php echo esc_url(site_url('directories')); ?>" class="text-sm hover:text-orange-600 transition-colors">Directories</a></li>
+                        <li><a href="<?php echo esc_url(site_url('packages/gateway')); ?>" class="text-sm hover:text-orange-600 transition-colors">Gateway</a></li>
+                        <li><a href="<?php echo esc_url(site_url('packages/waypoint')); ?>" class="text-sm hover:text-orange-600 transition-colors">Waypoint</a></li>
+                        <li><a href="<?php echo esc_url(site_url('roadmap')); ?>" class="text-sm hover:text-orange-600 transition-colors">Roadmap</a></li>
                     </ul>
                 </div>
 
@@ -54,32 +42,9 @@
                 <div>
                     <h3 class="font-lexend font-semibold text-sm mb-4">Resources</h3>
                     <ul class="space-y-2">
-                        <li><a href="<?php echo esc_url(site_url('docs')); ?>" class="text-sm hover:text-orange-600 transition-colors">Knowledgebase</a></li>
-                        <li><a href="<?php echo esc_url(site_url('tutorials')); ?>" class="text-sm hover:text-orange-600 transition-colors">Tutorials</a></li>
+                        <li><a href="<?php echo esc_url(site_url('docs')); ?>" class="text-sm hover:text-orange-600 transition-colors">Docs</a></li>
                         <li><a href="<?php echo esc_url(site_url('blog')); ?>" class="text-sm hover:text-orange-600 transition-colors">Blog</a></li>
                         <li><a href="<?php echo esc_url(site_url('support')); ?>" class="text-sm hover:text-orange-600 transition-colors">Support</a></li>
-                    </ul>
-                </div>
-
-                <!-- Company -->
-                <div>
-                    <h3 class="font-lexend font-semibold text-sm mb-4">Company</h3>
-                    <ul class="space-y-2">
-                        <li><a href="<?php echo esc_url(site_url('about')); ?>" class="text-sm hover:text-orange-600 transition-colors">About</a></li>
-                        <li><a href="<?php echo esc_url(site_url('careers')); ?>" class="text-sm hover:text-orange-600 transition-colors">Careers</a></li>
-                        <li><a href="<?php echo esc_url(site_url('partners')); ?>" class="text-sm hover:text-orange-600 transition-colors">Partners</a></li>
-                        <li><a href="<?php echo esc_url(site_url('contact')); ?>" class="text-sm hover:text-orange-600 transition-colors">Contact</a></li>
-                    </ul>
-                </div>
-
-                <!-- Developers -->
-                <div>
-                    <h3 class="font-lexend font-semibold text-sm mb-4">Developers</h3>
-                    <ul class="space-y-2">
-                        <li><a href="<?php echo esc_url(site_url('docs')); ?>" class="text-sm hover:text-orange-600 transition-colors">Documentation</a></li>
-                        <li><a href="https://github.com/caseyjmilne/" target="_blank" rel="noopener noreferrer" class="text-sm hover:text-orange-600 transition-colors">GitHub</a></li>
-                        <li><a href="<?php echo esc_url(site_url('changelog')); ?>" class="text-sm hover:text-orange-600 transition-colors">Changelog</a></li>
-                        <li><a href="<?php echo esc_url(site_url('roadmap')); ?>" class="text-sm hover:text-orange-600 transition-colors">Roadmap</a></li>
                     </ul>
                 </div>
 
@@ -89,30 +54,6 @@
                     <ul class="space-y-2">
                         <li><a href="<?php echo esc_url(site_url('privacy')); ?>" class="text-sm hover:text-orange-600 transition-colors">Privacy</a></li>
                         <li><a href="<?php echo esc_url(site_url('terms')); ?>" class="text-sm hover:text-orange-600 transition-colors">Terms</a></li>
-                        <li><a href="<?php echo esc_url(site_url('license')); ?>" class="text-sm hover:text-orange-600 transition-colors">License</a></li>
-                        <li><a href="<?php echo esc_url(site_url('security')); ?>" class="text-sm hover:text-orange-600 transition-colors">Security</a></li>
-                    </ul>
-                </div>
-
-                <!-- Community -->
-                <div>
-                    <h3 class="font-lexend font-semibold text-sm mb-4">Community</h3>
-                    <ul class="space-y-2">
-                        <li><a href="<?php echo esc_url(site_url('partners')); ?>" class="text-sm hover:text-orange-600 transition-colors">Partners</a></li>
-                        <li><a href="<?php echo esc_url(site_url('events')); ?>" class="text-sm hover:text-orange-600 transition-colors">Events</a></li>
-                        <li><a href="<?php echo esc_url(site_url('newsletter')); ?>" class="text-sm hover:text-orange-600 transition-colors">Newsletter</a></li>
-                        <li><a href="<?php echo esc_url(site_url('showcase')); ?>" class="text-sm hover:text-orange-600 transition-colors">Showcase</a></li>
-                    </ul>
-                </div>
-
-                <!-- Support -->
-                <div>
-                    <h3 class="font-lexend font-semibold text-sm mb-4">Support</h3>
-                    <ul class="space-y-2">
-                        <li><a href="<?php echo esc_url(site_url('help-center')); ?>" class="text-sm hover:text-orange-600 transition-colors">Help Center</a></li>
-                        <li><a href="<?php echo esc_url(site_url('contact-us')); ?>" class="text-sm hover:text-orange-600 transition-colors">Contact Us</a></li>
-                        <li><a href="<?php echo esc_url(site_url('status')); ?>" class="text-sm hover:text-orange-600 transition-colors">Status</a></li>
-                        <li><a href="<?php echo esc_url(site_url('faq')); ?>" class="text-sm hover:text-orange-600 transition-colors">FAQ</a></li>
                     </ul>
                 </div>
             </div>

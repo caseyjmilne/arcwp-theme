@@ -3,7 +3,7 @@ Contributors: arcwp
 Requires at least: 6.0
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 1.0.7
+Stable tag: 1.0.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,12 +31,21 @@ ARC WP Theme is a clean, performance-focused WordPress theme designed for modern
 
 == Changelog ==
 
+= 1.0.8 =
+* Updated footer structure to 3 main sections: Products, Resources, Legal
+* Products section: Gateway, Waypoint, Roadmap links
+* Gateway and Waypoint link to /packages/[package-slug] format
+* Resources section: Docs, Blog, Support links
+* Legal section: Privacy, Terms links
+* All links use matching slugs to page titles
+* Improved footer column spacing for better visual layout
+
 = 1.0.7 =
-* Updated brand styles. 
+* Updated brand styles.
 * Tailwind dark mode enabled.
 
 = 1.0.5 =
-* Dark brand style defined and added. 
+* Dark brand style defined and added.
 * Font use updated.
 * Home page content updated.
 
@@ -75,6 +84,9 @@ ARC WP Theme is a clean, performance-focused WordPress theme designed for modern
 * Menu and thumbnail support
 
 == Upgrade Notice ==
+
+= 1.0.8 =
+Footer navigation update with streamlined structure and improved spacing. Recommended update.
 
 = 1.0.4 =
 Major content update with new page templates, fonts, and enhanced navigation. Recommended update.
