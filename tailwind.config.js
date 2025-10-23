@@ -2,14 +2,11 @@
 module.exports = {
   content: [
     "./*.php",
-    "./templates/**/*.php"
+    "./templates/**/*.php",
+    "./apps/**/*.{js,jsx}"
   ],
   theme: {
-    extend: {
-      fontFamily: {
-        'playfair': ['Playfair Display', 'ui-serif', 'Georgia', 'serif'],
-      },
-    },
+    extend: {},
   },
   plugins: [],
 }
