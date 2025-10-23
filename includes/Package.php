@@ -24,7 +24,7 @@ class Package extends Collection
      *
      * @var string
      */
-    protected $table = 'gateway_packages';
+    protected $table = 'packages';
 
     /**
      * Collection title (singular)

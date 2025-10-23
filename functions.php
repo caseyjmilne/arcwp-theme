@@ -1,7 +1,8 @@
 <?php
 
-// Require Package Collection
+// Require Package Collection and Database Manager
 require_once get_template_directory() . '/includes/Package.php';
+require_once get_template_directory() . '/includes/PackageDatabase.php';
 
 add_action('wp_enqueue_scripts', function() {
     wp_enqueue_style(
@@ -81,29 +82,7 @@ add_action('init', function() {
 
 // Create packages table on theme activation
 add_action('after_switch_theme', function() {
-    global $wpdb;
-
-    $table_name = $wpdb->prefix . 'gateway_packages';
-    $charset_collate = $wpdb->get_charset_collate();
-
-    $sql = "CREATE TABLE $table_name (
-        id bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-        title varchar(255) NOT NULL,
-        slug varchar(255) NOT NULL,
-        type varchar(50) NOT NULL,
-        summary varchar(500) NULL,
-        description text NULL,
-        version varchar(50) NULL,
-        created_at datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-        updated_at datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-        PRIMARY KEY  (id),
-        UNIQUE KEY slug_unique (slug),
-        KEY title_index (title),
-        KEY type_index (type)
-    ) $charset_collate;";
-
-    require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
-    dbDelta($sql);
+    \ARCWP\PackageDatabase::install();
 
     // Flush rewrite rules on theme activation
     flush_rewrite_rules();
