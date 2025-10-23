@@ -1,5 +1,5 @@
 <footer class="bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-50 py-16 mt-auto">
-    <div class="max-w-[1120px] mx-auto px-4">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col md:flex-row justify-between gap-8 md:gap-12 lg:gap-16 mb-12">
             <!-- Logo and Slogan -->
             <div class="flex-shrink-0">
