@@ -8,17 +8,17 @@
             <div class="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
                 <!-- Left Content -->
                 <div>
-                    <h1 class="text-6xl lg:text-6xl font-black text-gray-500 mb-8 hero-title" style="opacity: 0;">
+                    <h1 class="text-6xl lg:text-6xl font-black text-slate-900 dark:text-slate-50 mb-8 hero-title" style="opacity: 0;">
                         Make WordPress Sites That Scale
                     </h1>
-                    <p class="text-xl text-gray-400 mb-10 leading-relaxed hero-subtitle" style="opacity: 0;">
+                    <p class="text-xl text-slate-900 dark:text-slate-50 mb-10 leading-relaxed hero-subtitle" style="opacity: 0;">
                         From rapid prototyping to enterprise-grade applications. ARC Suite gives you the professional tools and frameworks to build exceptional WordPress experiences.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 mb-12 hero-buttons" style="opacity: 0;">
-                        <a href="<?php echo site_url('packages'); ?>" class="group inline-flex items-center justify-center bg-sky-800 text-white px-10 py-5 rounded-full text-base font-bold hover:bg-sky-900 transition-all shadow-xl hover:shadow-2xl hover:scale-105">
+                        <a href="<?php echo site_url('packages'); ?>" class="group inline-flex items-center justify-center bg-orange-600 text-slate-50 px-10 py-5 rounded-full text-base font-bold hover:bg-orange-700 transition-all shadow-xl hover:shadow-2xl hover:scale-105">
                             Start Building Free
                         </a>
-                        <a href="#learn-more" class="inline-flex items-center justify-center text-gray-400 px-10 py-5 text-base font-semibold hover:text-gray-400 transition-colors">
+                        <a href="#learn-more" class="inline-flex items-center justify-center text-slate-900 dark:text-slate-50 px-10 py-5 text-base font-semibold hover:opacity-70 transition-colors">
                             Learn More
                         </a>
                     </div>
@@ -35,9 +35,9 @@
                     </div>
 
                     <!-- Floating Stats Card -->
-                    <div class="absolute -left-4 top-1/8 bg-zinc-800 rounded-xl shadow-xl p-4 hero-stat" style="opacity: 0;">
-                        <div class="text-3xl font-black text-gray-400 mb-1">10x</div>
-                        <div class="text-xs text-gray-500 font-medium">Faster builds</div>
+                    <div class="absolute -left-4 top-1/8 bg-slate-900 dark:bg-slate-50 rounded-xl shadow-xl p-4 hero-stat" style="opacity: 0;">
+                        <div class="text-3xl font-black text-slate-50 dark:text-slate-900 mb-1">10x</div>
+                        <div class="text-xs text-slate-50 dark:text-slate-900 font-medium">Faster builds</div>
                     </div>
 
                 </div>
@@ -50,13 +50,13 @@
 
         <!-- Part 1: Title (centered) -->
         <div class="max-w-4xl mx-auto px-4 mb-20 text-center">
-            <div class="inline-flex items-center gap-3 bg-gradient-to-r from-sky-900/30 to-purple-900/30 px-6 py-3 rounded-full mb-8 border border-sky-800/30 learn-tag" style="opacity: 0;">
-                <svg class="w-5 h-5 text-sky-400" fill="currentColor" viewBox="0 0 20 20">
+            <div class="inline-flex items-center gap-3 bg-gradient-to-r from-orange-600/30 to-orange-800/30 px-6 py-3 rounded-full mb-8 border border-orange-600/30 learn-tag" style="opacity: 0;">
+                <svg class="w-5 h-5 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM14 11a1 1 0 011 1v1h1a1 1 0 110 2h-1v1a1 1 0 11-2 0v-1h-1a1 1 0 110-2h1v-1a1 1 0 011-1z"/>
                 </svg>
-                <span class="text-sm font-bold text-sky-300">ARC SUITE</span>
-                <span class="text-xs text-gray-400">•</span>
-                <span class="text-xs font-medium text-gray-300">WHERE SPEED MEETS PRECISION</span>
+                <span class="text-sm font-bold text-orange-600">ARC SUITE</span>
+                <span class="text-xs text-slate-900 dark:text-slate-50">•</span>
+                <span class="text-xs font-medium text-slate-900 dark:text-slate-50">WHERE SPEED MEETS PRECISION</span>
             </div>
             <h2 class="text-8xl font-black learn-title" style="opacity: 0;">When Post Types Are Not Enough</h2>
         </div>
@@ -126,27 +126,27 @@
             
             <div class="grid grid-cols-2 gap-8">
                 <!-- Row 1 -->
-                <div class="p-6 bg-zinc-800 rounded-lg">
-                    <code class="text-sm">register_post_type('property')</code>
+                <div class="p-6 bg-slate-900 dark:bg-slate-50 rounded-lg">
+                    <code class="text-sm text-slate-50 dark:text-slate-900">register_post_type('property')</code>
                 </div>
-                <div class="p-6 bg-zinc-900 rounded-lg">
-                    <code class="text-sm">Property extends Model</code>
+                <div class="p-6 bg-slate-900 dark:bg-slate-50 rounded-lg border-2 border-orange-600">
+                    <code class="text-sm text-slate-50 dark:text-slate-900">Property extends Model</code>
                 </div>
-                
+
                 <!-- Row 2 -->
-                <div class="p-6 bg-zinc-800 rounded-lg">
-                    <code class="text-sm">WP_Query($inefficient_meta_query)</code>
+                <div class="p-6 bg-slate-900 dark:bg-slate-50 rounded-lg">
+                    <code class="text-sm text-slate-50 dark:text-slate-900">WP_Query($inefficient_meta_query)</code>
                 </div>
-                <div class="p-6 bg-zinc-900 rounded-lg">
-                    <code class="text-sm">Property->where('status', 'published')</code>
+                <div class="p-6 bg-slate-900 dark:bg-slate-50 rounded-lg border-2 border-orange-600">
+                    <code class="text-sm text-slate-50 dark:text-slate-900">Property->where('status', 'published')</code>
                 </div>
-                
+
                 <!-- Row 3 -->
-                <div class="p-6 bg-zinc-800 rounded-lg">
-                    <div class="text-sm">Get field from ACF (Advanced Custom Fields) or Meta Box</div>
+                <div class="p-6 bg-slate-900 dark:bg-slate-50 rounded-lg">
+                    <div class="text-sm text-slate-50 dark:text-slate-900">Get field from ACF (Advanced Custom Fields) or Meta Box</div>
                 </div>
-                <div class="p-6 bg-zinc-900 rounded-lg">
-                    <div class="text-sm">Get your fields from ARC Blueprint</div>
+                <div class="p-6 bg-slate-900 dark:bg-slate-50 rounded-lg border-2 border-orange-600">
+                    <div class="text-sm text-slate-50 dark:text-slate-900">Get your fields from ARC Blueprint</div>
                 </div>
             </div>
         </div>
@@ -156,9 +156,9 @@
     <!-- CTA Section -->
     <section id="cta" class="max-w-md mx-auto mt-20 mb-40">
         <article id="cta-content" class="flex flex-col items-center">
-            <h2 id="cta-heading" class="text-5xl text-center text-gray-400 mb-4">Start for free</h2>
-            <p id="cta-text" class="text-2xl text-center mb-8 text-gray-600">Start making models, collections and schemas today.</p>
-            <a id="cta-button" href="<?php echo site_url('packages'); ?>" class="inline-flex items-center justify-center text-gray-400 px-10 py-5 text-base font-semibold hover:text-gray-400 border border-zinc-800 hover:border-zinc-700 transition-colors">Get Started</a>
+            <h2 id="cta-heading" class="text-5xl text-center text-slate-900 dark:text-slate-50 mb-4">Start for free</h2>
+            <p id="cta-text" class="text-2xl text-center mb-8 text-slate-900 dark:text-slate-50">Start making models, collections and schemas today.</p>
+            <a id="cta-button" href="<?php echo site_url('packages'); ?>" class="inline-flex items-center justify-center text-slate-50 bg-orange-600 px-10 py-5 text-base font-semibold hover:bg-orange-700 transition-colors">Get Started</a>
         </article>
     </section>
 

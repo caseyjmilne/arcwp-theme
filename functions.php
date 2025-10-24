@@ -1,7 +1,8 @@
 <?php
 
-// Require Package Collection
+// Require Package Collection and Database Manager
 require_once get_template_directory() . '/includes/Package.php';
+require_once get_template_directory() . '/includes/PackageDatabase.php';
 
 add_action('wp_enqueue_scripts', function() {
     wp_enqueue_style(
@@ -81,29 +82,7 @@ add_action('init', function() {
 
 // Create packages table on theme activation
 add_action('after_switch_theme', function() {
-    global $wpdb;
-
-    $table_name = $wpdb->prefix . 'gateway_packages';
-    $charset_collate = $wpdb->get_charset_collate();
-
-    $sql = "CREATE TABLE $table_name (
-        id bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-        title varchar(255) NOT NULL,
-        slug varchar(255) NOT NULL,
-        type varchar(50) NOT NULL,
-        summary varchar(500) NULL,
-        description text NULL,
-        version varchar(50) NULL,
-        created_at datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-        updated_at datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-        PRIMARY KEY  (id),
-        UNIQUE KEY slug_unique (slug),
-        KEY title_index (title),
-        KEY type_index (type)
-    ) $charset_collate;";
-
-    require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
-    dbDelta($sql);
+    \ARCWP\PackageDatabase::install();
 
     // Flush rewrite rules on theme activation
     flush_rewrite_rules();
@@ -124,6 +103,64 @@ add_action('init', function() {
 add_filter('query_vars', function($vars) {
     $vars[] = 'package_slug';
     return $vars;
+});
+
+// Custom login redirects - force all users (including admins) to /dashboard
+add_filter('login_redirect', function($redirect_to, $request, $user) {
+    // Redirect ALL users to /dashboard on successful login (including admins)
+    if (isset($user->ID)) {
+        return site_url('/dashboard/');
+    }
+    return $redirect_to;
+}, 999, 3);
+
+// Redirect failed logins back to /account
+add_action('wp_login_failed', function($username) {
+    $referrer = wp_get_referer();
+
+    // Check if the login attempt came from /account page
+    if ($referrer && strpos($referrer, 'account') !== false) {
+        wp_redirect(site_url('/account/?login=failed'));
+        exit;
+    }
+});
+
+// Redirect on authentication error (wrong password, empty fields, etc.)
+add_filter('authenticate', function($user, $username, $password) {
+    $referrer = wp_get_referer();
+
+    // Only process if it's from our custom login page
+    if ($referrer && strpos($referrer, 'account') !== false) {
+        // Check if username or password is empty
+        if (empty($username) || empty($password)) {
+            wp_redirect(site_url('/account/?login=empty'));
+            exit;
+        }
+    }
+
+    return $user;
+}, 101, 3);
+
+// Redirect logout to home page
+add_action('wp_logout', function() {
+    wp_redirect(home_url());
+    exit;
+});
+
+// Set a flag when user logs in successfully
+add_action('wp_login', function($user_login, $user) {
+    set_transient('redirect_after_login_' . $user->ID, true, 60);
+}, 10, 2);
+
+// Check for the flag and redirect from wp-admin to dashboard
+add_action('admin_init', function() {
+    $user_id = get_current_user_id();
+
+    if (get_transient('redirect_after_login_' . $user_id)) {
+        delete_transient('redirect_after_login_' . $user_id);
+        wp_redirect(site_url('/dashboard/'));
+        exit;
+    }
 });
 
 // Theme updater management
