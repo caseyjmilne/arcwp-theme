@@ -73,9 +73,9 @@ const PackageSingle = () => {
   const { title, type, version, summary, description } = pkg;
 
   const typeColors = {
-    plugins: 'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200',
-    react: 'bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200',
-    themes: 'bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200',
+    plugins: 'bg-orange-600 text-slate-50',
+    react: 'bg-slate-50 dark:bg-slate-900 border border-slate-900 dark:border-slate-50 text-slate-900 dark:text-slate-50',
+    themes: 'bg-slate-50 dark:bg-slate-900 border border-slate-900 dark:border-slate-50 text-slate-900 dark:text-slate-50',
   };
 
   return (

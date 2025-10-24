@@ -1,9 +1,9 @@
 import { createElement } from '@wordpress/element';
 
 const SelectFilter = ({ filter, value, onChange }) => {
-  const { label, placeholder, choices = [] } = filter;
+  const { label, placeholder, choices = [], className = '' } = filter;
 
-  return createElement('div', { className: 'flex flex-col gap-2' },
+  return createElement('div', { className: `flex flex-col gap-2 ${className}` },
     label && createElement('label', {
       className: 'text-sm font-medium text-slate-900 dark:text-slate-50'
     }, label),
