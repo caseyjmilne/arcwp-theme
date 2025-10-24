@@ -16,12 +16,6 @@ const PackageList = () => {
 
   const filters = [
     {
-      type: 'text',
-      field: 'search',
-      label: 'Search',
-      placeholder: 'Search packages...'
-    },
-    {
       type: 'select',
       field: 'type',
       label: 'Type',
@@ -30,7 +24,14 @@ const PackageList = () => {
         { value: 'plugins', label: 'Plugins' },
         { value: 'react', label: 'React' },
         { value: 'themes', label: 'Themes' },
-      ]
+      ],
+      className: 'min-w-[200px]'
+    },
+    {
+      type: 'text',
+      field: 'search',
+      label: 'Search',
+      placeholder: 'Search packages...'
     }
   ];
 
@@ -78,9 +79,43 @@ const PackageList = () => {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center p-12">
-        <div className="text-slate-600 dark:text-slate-400">
-          Loading packages...
+      <div className="min-h-[80vh]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+          <div className="h-12 w-64 bg-slate-200 dark:bg-slate-800 rounded animate-pulse mb-2"></div>
+          <div className="h-6 w-96 bg-slate-200 dark:bg-slate-800 rounded animate-pulse"></div>
+        </div>
+
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+          {/* Filters Skeleton */}
+          <div className="flex gap-4">
+            <div className="min-w-[200px] h-12 bg-slate-200 dark:bg-slate-800 rounded animate-pulse"></div>
+            <div className="flex-1 h-12 bg-slate-200 dark:bg-slate-800 rounded animate-pulse"></div>
+          </div>
+
+          {/* Count Skeleton */}
+          <div className="h-5 w-32 bg-slate-200 dark:bg-slate-800 rounded animate-pulse"></div>
+
+          {/* Package Cards Skeleton */}
+          <div className="space-y-6">
+            {[1, 2, 3, 4, 5].map((i) => (
+              <div
+                key={i}
+                className="bg-slate-50 dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 rounded-xl p-6 animate-pulse"
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex-1">
+                    <div className="h-7 w-3/4 bg-slate-200 dark:bg-slate-800 rounded mb-3"></div>
+                    <div className="h-5 w-1/4 bg-slate-200 dark:bg-slate-800 rounded"></div>
+                  </div>
+                  <div className="w-20 h-6 bg-slate-200 dark:bg-slate-800 rounded"></div>
+                </div>
+                <div className="space-y-2">
+                  <div className="h-4 w-full bg-slate-200 dark:bg-slate-800 rounded"></div>
+                  <div className="h-4 w-5/6 bg-slate-200 dark:bg-slate-800 rounded"></div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     );
@@ -99,7 +134,7 @@ const PackageList = () => {
 
   return (
     <div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
         <h1 className="text-4xl font-bold text-slate-900 dark:text-slate-50 mb-2">
           Packages
         </h1>

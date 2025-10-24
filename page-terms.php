@@ -1,28 +1,25 @@
 <?php
-/**
- * Template Name: Terms of Service
- */
 get_header();
 ?>
 
 <main class="min-h-screen">
     <article>
-        <div class="max-w-[1120px] mx-auto px-4 py-16 lg:py-20">
-            <h1 class="text-4xl lg:text-5xl font-black text-gray-400 mb-8 leading-tight">
+        <div class="max-w-2xl mx-auto px-4 py-16 lg:py-20">
+            <h1 class="text-3xl lg:text-4xl font-black text-slate-900 dark:text-slate-50 mb-8 leading-tight">
                 Terms of Service
             </h1>
 
             <div class="prose prose-lg max-w-none
-                prose-headings:font-black prose-headings:text-gray-400
-                prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6
+                prose-headings:font-black prose-headings:text-slate-900 dark:prose-headings:text-slate-50
+                prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-6
                 prose-h3:text-2xl prose-h3:mt-10 prose-h3:mb-4
                 prose-h4:text-xl prose-h4:mt-8 prose-h4:mb-3
-                prose-p:text-gray-400 prose-p:leading-relaxed prose-p:mb-6
-                prose-a:text-gray-400 prose-a:font-semibold hover:prose-a:opacity-70
-                prose-strong:text-gray-400 prose-strong:font-bold
-                prose-ul:mb-6 prose-li:text-gray-400">
+                prose-p:text-slate-900 dark:prose-p:text-slate-50 prose-p:leading-relaxed prose-p:mb-6
+                prose-a:text-orange-600 prose-a:font-semibold hover:prose-a:opacity-70
+                prose-strong:text-slate-900 dark:prose-strong:text-slate-50 prose-strong:font-bold
+                prose-ul:mb-6 prose-li:text-slate-900 prose-li:dark:text-slate-50">
 
-                <p class="text-sm text-gray-500 mb-8">Last updated: <?php echo date('F j, Y'); ?></p>
+                <p class="text-sm text-slate-900 dark:text-slate-50 mb-8">Last updated: <?php echo date('F j, Y'); ?></p>
 
                 <h2>Agreement to Terms</h2>
                 <p>By accessing or using arcwp.ca and our products including ARC Suite, you agree to be bound by these Terms of Service. If you disagree with any part of these terms, you may not access our services.</p>

@@ -1,28 +1,25 @@
 <?php
-/**
- * Template Name: Privacy Policy
- */
 get_header();
 ?>
 
 <main class="min-h-screen">
     <article>
-        <div class="max-w-[1120px] mx-auto px-4 py-16 lg:py-20">
-            <h1 class="text-4xl lg:text-5xl font-black text-gray-400 mb-8 leading-tight">
+        <div class="max-w-2xl mx-auto px-4 py-16 lg:py-20">
+            <h1 class="text-3xl lg:text-4xl font-black text-slate-900 dark:text-slate-50 mb-8 leading-tight">
                 Privacy Policy
             </h1>
 
             <div class="prose prose-lg max-w-none
-                prose-headings:font-black prose-headings:text-gray-400
-                prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6
+                prose-headings:font-black prose-headings:text-slate-900 dark:prose-headings:text-slate-50
+                prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-6
                 prose-h3:text-2xl prose-h3:mt-10 prose-h3:mb-4
                 prose-h4:text-xl prose-h4:mt-8 prose-h4:mb-3
-                prose-p:text-gray-400 prose-p:leading-relaxed prose-p:mb-6
-                prose-a:text-gray-400 prose-a:font-semibold hover:prose-a:opacity-70
-                prose-strong:text-gray-400 prose-strong:font-bold
-                prose-ul:mb-6 prose-li:text-gray-400">
+                prose-p:text-slate-900 dark:prose-p:text-slate-50 prose-p:leading-relaxed prose-p:mb-6
+                prose-a:text-orange-600 prose-a:font-semibold hover:prose-a:opacity-70
+                prose-strong:text-slate-900 dark:prose-strong:text-slate-50 prose-strong:font-bold
+                prose-ul:mb-6 prose-li:text-slate-900 prose-li:dark:text-slate-50">
 
-                <p class="text-sm text-gray-500 mb-8">Last updated: <?php echo date('F j, Y'); ?></p>
+                <p class="text-sm text-slate-900 dark:text-slate-50 mb-8">Last updated: <?php echo date('F j, Y'); ?></p>
 
                 <h2>Introduction</h2>
                 <p>ARC Software ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website arcwp.ca and use our products, including ARC Suite.</p>
@@ -93,7 +90,7 @@ get_header();
                 <p>Your information may be transferred to and maintained on servers located outside of your jurisdiction where data protection laws may differ. By using our services, you consent to such transfers.</p>
 
                 <h2>Children's Privacy</h2>
-                <p>Our services are not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13.</p>
+                <p>Our services are not intended for children under 18 years of age. We do not knowingly collect personal information from children under 18.</p>
 
                 <h2>Changes to This Policy</h2>
                 <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the "Last updated" date.</p>

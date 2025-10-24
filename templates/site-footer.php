@@ -3,7 +3,7 @@
         <div class="flex flex-col md:flex-row justify-between gap-8 md:gap-12 lg:gap-16 mb-12">
             <!-- Logo and Slogan -->
             <div class="flex-shrink-0">
-                <p class="font-lexend font-semibold text-base leading-relaxed max-w-xs mb-4">
+                <p class="font-lexend font-semibold text-base leading-relaxed max-w-xs md:max-w-md mb-4">
                     WHERE <span class="text-orange-600">SPEED</span> AND <span class="text-orange-600">PRECISION</span> MEET
                 </p>
                 <a href="<?php echo home_url('/'); ?>" class="block hover:opacity-80 transition-opacity">

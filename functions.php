@@ -5,17 +5,25 @@ require_once get_template_directory() . '/includes/Package.php';
 require_once get_template_directory() . '/includes/PackageDatabase.php';
 
 add_action('wp_enqueue_scripts', function() {
+    // Enqueue Google Fonts (Geist and Lexend Exa)
+    wp_enqueue_style(
+        'arcwp-fonts',
+        'https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800;900&family=Lexend+Exa:wght@400;500;600;700;800;900&display=swap',
+        [],
+        null
+    );
+
     wp_enqueue_style(
         'arcwp-style',
         get_stylesheet_uri(),
-        [],
+        ['arcwp-fonts'],
         wp_get_theme()->get('Version')
     );
 
     wp_enqueue_style(
         'arcwp-tailwind',
         get_template_directory_uri() . '/tailwind.css',
-        [],
+        ['arcwp-fonts'],
         wp_get_theme()->get('Version')
     );
 
