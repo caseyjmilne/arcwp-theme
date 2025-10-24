@@ -98,9 +98,11 @@
     --text-7xl--line-height: 1;
     --text-8xl: 6rem;
     --text-8xl--line-height: 1;
+    --font-weight-normal: 400;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
     --font-weight-black: 900;
     --leading-tight: 1.25;
     --leading-snug: 1.375;
@@ -1461,6 +1463,9 @@
   .bg-orange-600 {
     background-color: var(--color-orange-600);
   }
+  .bg-orange-700 {
+    background-color: var(--color-orange-700);
+  }
   .bg-purple-100 {
     background-color: var(--color-purple-100);
   }
@@ -1755,9 +1760,17 @@
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
+  .font-extrabold {
+    --tw-font-weight: var(--font-weight-extrabold);
+    font-weight: var(--font-weight-extrabold);
+  }
   .font-medium {
     --tw-font-weight: var(--font-weight-medium);
     font-weight: var(--font-weight-medium);
+  }
+  .font-normal {
+    --tw-font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-normal);
   }
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
@@ -2211,6 +2224,12 @@
   .md\:gap-x-24 {
     @media (width >= 48rem) {
       column-gap: calc(var(--spacing) * 24);
+    }
+  }
+  .md\:text-3xl {
+    @media (width >= 48rem) {
+      font-size: var(--text-3xl);
+      line-height: var(--tw-leading, var(--text-3xl--line-height));
     }
   }
   .md\:text-4xl {
