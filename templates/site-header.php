@@ -22,9 +22,18 @@
             </a>
 
             <!-- Right column: Theme toggle and main menu -->
-            <div class="flex items-center gap-8">
+            <div class="flex items-center gap-4 md:gap-8">
                 <?php require_once get_template_directory() . '/templates/theme-toggle.php'; ?>
-                <nav>
+
+                <!-- Mobile menu button (visible below md) -->
+                <button id="header-menu-toggle" class="md:hidden text-slate-900 dark:text-slate-50" aria-label="Open menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
+                <!-- Desktop nav (hidden below md) -->
+                <nav class="hidden md:block">
                 <?php
                 wp_nav_menu(array(
                     'theme_location' => 'primary',
@@ -36,5 +45,28 @@
                 </nav>
             </div>
         </div>
+    </div>
+
+    <!-- Mobile Header Menu Overlay -->
+    <div id="header-menu-overlay" class="fixed inset-0 bg-slate-50 dark:bg-slate-900 z-50 hidden flex-col">
+        <div class="flex justify-end p-6">
+            <button id="header-menu-close" class="text-slate-900 dark:text-slate-50 hover:text-orange-600 transition-colors" aria-label="Close menu">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <nav class="flex-1 px-8">
+            <?php
+            wp_nav_menu(array(
+                'theme_location' => 'primary',
+                'container' => false,
+                'menu_class' => 'space-y-6',
+                'fallback_cb' => false,
+                'link_before' => '<span class="block text-2xl font-lexend font-bold uppercase py-3 text-slate-900 dark:text-slate-50 hover:text-orange-600 transition-colors">',
+                'link_after' => '</span>',
+            ));
+            ?>
+        </nav>
     </div>
 </header>
