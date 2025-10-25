@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 const PackageCard = ({ package: pkg }) => {
-  const { title, slug, type, summary, version } = pkg;
+  const { title, slug, type, summary, version, release_file } = pkg;
 
   const typeColors = {
     plugins: 'bg-orange-600 text-slate-50',
@@ -26,8 +26,26 @@ const PackageCard = ({ package: pkg }) => {
       </div>
 
       {version && (
-        <div className="text-sm text-slate-600 dark:text-slate-400 mb-3">
-          Version {version}
+        <div className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 mb-3">
+          <span>Version {version}</span>
+          {release_file && (
+            <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-400 text-xs font-medium rounded">
+              <svg
+                className="w-3 h-3"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+                />
+              </svg>
+              Download
+            </span>
+          )}
         </div>
       )}
 

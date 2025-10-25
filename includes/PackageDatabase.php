@@ -29,6 +29,7 @@ class PackageDatabase
             summary varchar(500) NULL,
             description text NULL,
             version varchar(50) NULL,
+            release_file bigint(20) unsigned NULL,
             created_at datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
             updated_at datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
             PRIMARY KEY  (id),

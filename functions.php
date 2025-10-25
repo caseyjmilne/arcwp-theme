@@ -27,6 +27,15 @@ add_action('wp_enqueue_scripts', function() {
         wp_get_theme()->get('Version')
     );
 
+    // Enqueue mobile menu toggle script (on all pages)
+    wp_enqueue_script(
+        'arcwp-mobile-menu',
+        get_template_directory_uri() . '/js/mobile-menu.js',
+        [],
+        wp_get_theme()->get('Version'),
+        true
+    );
+
     // Enqueue home page animations as ES6 module (only on homepage)
     // The module imports anime.js directly, so we don't need to enqueue it separately
     if (is_front_page() || is_page_template('page-home.php')) {

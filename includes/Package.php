@@ -45,7 +45,7 @@ class Package extends Collection
      *
      * @var array
      */
-    protected $fillable = ['title', 'slug', 'description', 'summary', 'version', 'type'];
+    protected $fillable = ['title', 'slug', 'description', 'summary', 'version', 'type', 'release_file'];
 
     /**
      * Route configuration
@@ -135,6 +135,17 @@ class Package extends Collection
             'label' => 'Version',
             'placeholder' => 'e.g., 1.0.0',
             'helpText' => 'Current version number of the package',
+        ],
+        'release_file' => [
+            'type' => 'file',
+            'label' => 'Release File',
+            'required' => false,
+            'helpText' => 'Upload the package release file (zip format)',
+            'buttonText' => 'Select Release File',
+            'description' => 'Upload a zip file containing the package release',
+            'allowedTypes' => ['application/zip', 'application/x-zip-compressed'],
+            'mediaTitle' => 'Select Package Release',
+            'mediaButtonText' => 'Use this file',
         ],
     ];
 }
