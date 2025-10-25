@@ -65,6 +65,14 @@ class Package extends Collection
             'update' => true,
             'delete' => true,
         ],
+        'permissions' => [
+            'get_many' => [
+                'type' => 'nonce_only'
+            ],
+            'get_one' => [
+                'type' => 'nonce_only'
+            ],
+        ]
     ];
 
     /**
