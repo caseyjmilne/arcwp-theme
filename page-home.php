@@ -15,7 +15,7 @@
                         From rapid prototyping to enterprise-grade applications. ARC Suite gives you the professional tools and frameworks to build exceptional WordPress experiences.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 mb-12 hero-buttons" style="opacity: 0;">
-                        <a href="<?php echo site_url('packages'); ?>" class="group inline-flex items-center justify-center bg-orange-600 text-slate-50 px-10 py-5 rounded-full text-base font-bold hover:bg-orange-700 transition-all shadow-xl hover:shadow-2xl hover:scale-105">
+                        <a href="<?php echo site_url('packages'); ?>" class="group inline-flex items-center justify-center bg-orange-800 text-white px-10 py-5 rounded-full text-base font-bold hover:bg-orange-700 transition-all shadow-xl hover:shadow-2xl hover:scale-105">
                             Start Building Free
                         </a>
                         <a href="#learn-more" class="inline-flex items-center justify-center text-slate-900 dark:text-slate-50 px-10 py-5 text-base font-semibold hover:opacity-70 transition-colors">
