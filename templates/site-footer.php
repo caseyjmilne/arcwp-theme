@@ -71,7 +71,7 @@
             <div class="flex-shrink-0">
                 <!-- Slogan - order 1 on mobile -->
                 <p class="font-lexend font-semibold text-xs md:text-sm leading-relaxed max-w-xs md:max-w-md mb-4 order-1">
-                    WHERE <span class="text-orange-800">SPEED</span> AND <span class="text-orange-800">PRECISION</span> MEET
+                    WHERE <span class="text-orange-500">SPEED</span> AND <span class="text-orange-500">PRECISION</span> MEET
                 </p>
 
                 <!-- Logo and Hamburger Container - order 2 on mobile -->
