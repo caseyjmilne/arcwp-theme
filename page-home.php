@@ -30,11 +30,12 @@
                 <!-- Right Image -->
                 <div class="relative lg:ml-auto hero-image" style="opacity: 0; max-width: 652px;">
                     <div>
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/collection-extends-image.png" alt="Gateway Collections" width="652" height="384" class="w-full h-auto object-contain">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/collection-extends-light.png" alt="Gateway Collections" width="652" height="384" class="w-full h-auto object-contain dark:hidden">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/collection-extends-dark.png" alt="Gateway Collections" width="652" height="384" class="w-full h-auto object-contain hidden dark:block">
                     </div>
 
                     <!-- Floating Stats Card -->
-                    <div class="absolute -left-12 top-1/8 bg-slate-900 dark:bg-slate-50 rounded-xl shadow-xl p-4 hero-stat" style="opacity: 0;">
+                    <div class="absolute -left-16 top-1/8 bg-slate-900 dark:bg-slate-50 rounded-xl shadow-xl p-4 hero-stat" style="opacity: 0;">
                         <div class="text-3xl font-black text-slate-50 dark:text-slate-900 mb-1">10x</div>
                         <div class="text-xs text-slate-50 dark:text-slate-900 font-medium">Scalability</div>
                     </div>
