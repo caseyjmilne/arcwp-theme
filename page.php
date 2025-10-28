@@ -1,13 +1,12 @@
-<?php
-get_header();
-?>
+<?php get_header(); ?>
 
 <main class="min-h-screen">
     <?php while (have_posts()) : the_post(); ?>
 
         <article>
             <div class="max-w-[1120px] mx-auto px-4 py-16 lg:py-20">
-                <h1 class="text-4xl lg:text-5xl font-black text-gray-400 mb-8 leading-tight">
+                
+            <h1 class="text-3xl lg:text-5xl font-black text-slate-900 dark:text-slate-50 mb-12 leading-tight">
                     <?php the_title(); ?>
                 </h1>
 
@@ -21,14 +20,14 @@ get_header();
                     prose-strong:text-gray-400 prose-strong:font-bold
                     prose-img:rounded-xl
                     prose-pre:bg-blue-950 prose-pre:border prose-pre:border-blue-900
-                    prose-code:text-blue-100 prose-code:before:content-[''] prose-code:after:content-['']">
+                    prose-code:text-blue-100">
                     <?php the_content(); ?>
                 </div>
+
             </div>
         </article>
 
     <?php endwhile; ?>
 </main>
 
-<?php
-get_footer();
+<?php get_footer();
