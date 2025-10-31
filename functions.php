@@ -78,6 +78,33 @@ add_action('wp_enqueue_scripts', function() {
             ]);
         }
     }
+
+    // ========================================================================
+    // TEST1 ANIMATION - Timeline Controls Test
+    // This section can be removed after testing is complete
+    // ========================================================================
+    if (is_page('test1')) {
+        // Enqueue test controls script as ES6 module
+        // The module imports anime.js and test-timeline.js
+        wp_enqueue_script(
+            'arcwp-test-controls',
+            get_template_directory_uri() . '/js/test-controls.js',
+            [], // No dependencies - module imports everything itself
+            wp_get_theme()->get('Version'),
+            true
+        );
+
+        // Add type="module" attribute to the script tag
+        add_filter('script_loader_tag', function($tag, $handle) {
+            if ('arcwp-test-controls' === $handle) {
+                $tag = str_replace('<script ', '<script type="module" ', $tag);
+            }
+            return $tag;
+        }, 10, 2);
+    }
+    // ========================================================================
+    // END TEST1 ANIMATION
+    // ========================================================================
 });
 
 // Add theme support for menus and features
